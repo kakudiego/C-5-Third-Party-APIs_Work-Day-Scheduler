@@ -21,6 +21,11 @@ textarea {
   border-bottom: 10px solid black;
 }
 
+.table td,
+.table th {
+  vertical-align: middle;
+}
+
 .description {
   white-space: pre-wrap;
 }
@@ -63,9 +68,14 @@ textarea {
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
+  background-image: url("/assets/images/save-regular.svg");
 }
 
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+#save-button:hover {
+  color: green;
 }
