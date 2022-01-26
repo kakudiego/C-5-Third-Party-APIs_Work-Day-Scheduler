@@ -10,7 +10,7 @@ $(document).ready(function () {
   update();
 });
 
-// select textarea and input
+// select each save button
 let save1 = document.querySelector("#save-1");
 let save2 = document.querySelector("#save-2");
 let save3 = document.querySelector("#save-3");
@@ -21,6 +21,7 @@ let save7 = document.querySelector("#save-7");
 let save8 = document.querySelector("#save-8");
 let save9 = document.querySelector("#save-9");
 
+// select each input
 let userInput1 = document.querySelector("#user-input1");
 let userInput2 = document.querySelector("#user-input2");
 let userInput3 = document.querySelector("#user-input3");
@@ -30,63 +31,61 @@ let userInput6 = document.querySelector("#user-input6");
 let userInput7 = document.querySelector("#user-input7");
 let userInput8 = document.querySelector("#user-input8");
 let userInput9 = document.querySelector("#user-input9");
-// get value from input element
 
-// event listener for button
+// event listener for button and save localStorage
 save1.addEventListener("click", function (event) {
   event.preventDefault();
   localStorage.setItem("save1", JSON.stringify(userInput1.value));
 
-  console.log(userInput1.value);
-  console.log("09:00");
+  console.log("09:00", userInput1.value);
 });
-save2.addEventListener("click", function () {
+save2.addEventListener("click", function (event) {
+  event.preventDefault();
   localStorage.setItem("save2", JSON.stringify(userInput2.value));
 
-  console.log(userInput2.value);
-  console.log("10:00");
+  console.log("10:00", userInput2.value);
 });
-save3.addEventListener("click", function () {
+save3.addEventListener("click", function (event) {
+  event.preventDefault();
   localStorage.setItem("save3", JSON.stringify(userInput3.value));
 
-  console.log(userInput3.value);
-  console.log("11:00");
+  console.log("11:00", userInput3.value);
 });
-save4.addEventListener("click", function () {
+save4.addEventListener("click", function (event) {
+  event.preventDefault();
   localStorage.setItem("save4", JSON.stringify(userInput4.value));
 
-  console.log(userInput4.value);
-  console.log("12:00");
+  console.log("12:00", userInput4.value);
 });
-save5.addEventListener("click", function () {
+save5.addEventListener("click", function (event) {
+  event.preventDefault();
   localStorage.setItem("save5", JSON.stringify(userInput5.value));
-  console.log(userInput5.value);
 
-  console.log("13:00");
+  console.log("13:00", userInput5.value);
 });
-save6.addEventListener("click", function () {
+save6.addEventListener("click", function (event) {
+  event.preventDefault();
   localStorage.setItem("save6", JSON.stringify(userInput6.value));
 
-  console.log(userInput6.value);
-  console.log("14:00");
+  console.log("14:00", userInput6.value);
 });
-save7.addEventListener("click", function () {
+save7.addEventListener("click", function (event) {
+  event.preventDefault();
   localStorage.setItem("save7", JSON.stringify(userInput7.value));
 
-  console.log(userInput7.value);
-  console.log("15:00");
+  console.log("15:00", userInput7.value);
 });
-save8.addEventListener("click", function () {
+save8.addEventListener("click", function (event) {
+  event.preventDefault();
   localStorage.setItem("save8", JSON.stringify(userInput8.value));
 
-  console.log(userInput8.value);
-  console.log("16:00");
+  console.log("16:00", userInput8.value);
 });
-save9.addEventListener("click", function () {
+save9.addEventListener("click", function (event) {
+  event.preventDefault();
   localStorage.setItem("save9", JSON.stringify(userInput9.value));
 
-  console.log(userInput9.value);
-  console.log("17:00");
+  console.log("17:00", userInput9.value);
 });
 
 // load tasks
@@ -96,41 +95,10 @@ save9.addEventListener("click", function () {
 console.log(localStorage);
 
 var loadTasks = function () {
-  var savedTasks = localStorage.getItem("save1");
   // if there are no tasks, set tasks to an empty array and return out of the function
-  if (!savedTasks) {
-    return false;
-  }
-  console.log("Saved tasks found!");
-  // else, load up saved tasks
+  var savedTasks = JSON.parse(localStorage.getItem("save1") || "{}");
+  console.log("This is the save1 value:", savedTasks);
 
-  // parse into array of objects
-  savedTasks = JSON.parse(savedTasks);
-
-  var savedTasks = localStorage.getItem("save2");
-  // if there are no tasks, set tasks to an empty array and return out of the function
-  if (!savedTasks) {
-    return false;
-  }
-  console.log("Saved tasks found!");
-  // else, load up saved tasks
-
-  // parse into array of objects
-  savedTasks = JSON.parse(savedTasks);
+  // savedTasks = JSON.parse(savedTasks);
 };
 loadTasks();
-
-// // To get data from local storage, you do something like this:
-// // get current data from localStorage. If no data exists, return empty object
-// let dailySchedule = JSON.parse(localStorage.getItem("dailySchedule") || "{}");
-
-// // You can access these values just like you would any other object
-// console.log(dailySchedule["save1"]);
-
-// var dailySchedule will look like this (I think):
-// let dailySchedule =
-//   {
-//     "save1": "test1",
-//     "save2": "test2",
-//     "save3": "test3"
-//   }
