@@ -32,73 +32,98 @@ let userInput7 = document.querySelector("#user-input7");
 let userInput8 = document.querySelector("#user-input8");
 let userInput9 = document.querySelector("#user-input9");
 
+// save data after reload
+let keepText = [
+  (userInput1.value = JSON.parse(localStorage.getItem("09:00"))),
+  (userInput2.value = JSON.parse(localStorage.getItem("10:00"))),
+  (userInput3.value = JSON.parse(localStorage.getItem("11:00"))),
+  (userInput4.value = JSON.parse(localStorage.getItem("12:00"))),
+  (userInput5.value = JSON.parse(localStorage.getItem("13:00"))),
+  (userInput6.value = JSON.parse(localStorage.getItem("14:00"))),
+  (userInput7.value = JSON.parse(localStorage.getItem("15:00"))),
+  (userInput8.value = JSON.parse(localStorage.getItem("16:00"))),
+  (userInput9.value = JSON.parse(localStorage.getItem("17:00"))),
+];
+
+// hit enter to save input
+enterSave = function (event) {
+  if (event.charCode === 13) {
+    localStorage.setItem("09:00", JSON.stringify(userInput1.value));
+  }
+};
+
 // event listener for button and save localStorage
 save1.addEventListener("click", function (event) {
   event.preventDefault();
-  localStorage.setItem("save1", JSON.stringify(userInput1.value));
+
+  localStorage.setItem("09:00", JSON.stringify(userInput1.value));
 
   console.log("09:00", userInput1.value);
 });
 save2.addEventListener("click", function (event) {
   event.preventDefault();
-  localStorage.setItem("save2", JSON.stringify(userInput2.value));
+  localStorage.setItem("10:00", JSON.stringify(userInput2.value));
 
   console.log("10:00", userInput2.value);
 });
 save3.addEventListener("click", function (event) {
   event.preventDefault();
-  localStorage.setItem("save3", JSON.stringify(userInput3.value));
+  localStorage.setItem("11:00", JSON.stringify(userInput3.value));
 
   console.log("11:00", userInput3.value);
 });
 save4.addEventListener("click", function (event) {
   event.preventDefault();
-  localStorage.setItem("save4", JSON.stringify(userInput4.value));
+  localStorage.setItem("12:00", JSON.stringify(userInput4.value));
 
   console.log("12:00", userInput4.value);
 });
 save5.addEventListener("click", function (event) {
   event.preventDefault();
-  localStorage.setItem("save5", JSON.stringify(userInput5.value));
+  localStorage.setItem("13:00", JSON.stringify(userInput5.value));
 
   console.log("13:00", userInput5.value);
 });
 save6.addEventListener("click", function (event) {
   event.preventDefault();
-  localStorage.setItem("save6", JSON.stringify(userInput6.value));
+  localStorage.setItem("14:00", JSON.stringify(userInput6.value));
 
   console.log("14:00", userInput6.value);
 });
 save7.addEventListener("click", function (event) {
   event.preventDefault();
-  localStorage.setItem("save7", JSON.stringify(userInput7.value));
+  localStorage.setItem("15:00", JSON.stringify(userInput7.value));
 
   console.log("15:00", userInput7.value);
 });
 save8.addEventListener("click", function (event) {
   event.preventDefault();
-  localStorage.setItem("save8", JSON.stringify(userInput8.value));
+  localStorage.setItem("16:00", JSON.stringify(userInput8.value));
 
   console.log("16:00", userInput8.value);
 });
 save9.addEventListener("click", function (event) {
   event.preventDefault();
-  localStorage.setItem("save9", JSON.stringify(userInput9.value));
+  localStorage.setItem("17:00", JSON.stringify(userInput9.value));
 
   console.log("17:00", userInput9.value);
 });
+
+// delete task button
+function deleteTask() {
+  localStorage.removeItem("09:00");
+  userInput1.value = "";
+}
 
 // load tasks
 // let dayTask = JSON.parse(localStorage.getItem("save4") || "{}");
 // console.log(dayTask["save1"]);
 
-console.log(localStorage);
+// var loadTasks = function () {
+//   // if there are no tasks, set tasks to an empty array and return out of the function
+//   var savedTasks = JSON.parse(localStorage.getItem("save1") || "{}");
+//   console.log("This is the save1 value:", savedTasks);
 
-var loadTasks = function () {
-  // if there are no tasks, set tasks to an empty array and return out of the function
-  var savedTasks = JSON.parse(localStorage.getItem("save1") || "{}");
-  console.log("This is the save1 value:", savedTasks);
-
-  // savedTasks = JSON.parse(savedTasks);
-};
-loadTasks();
+//   // savedTasks = JSON.parse(savedTasks);
+// };
+// loadTasks();

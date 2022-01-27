@@ -24,8 +24,9 @@
           <table id="task-element" class="table table-bordered justify-content-center time-table">
             <tr>
               <td class="hour text-center" data-time="9" id="uno">09:00</td>
-              <td class="w-75 taskInfo"><input id="user-input1" class="textarea md-textarea form-control" type="text" name="task" required></input></td>
+              <td class="w-75 taskInfo"><input id="user-input1" class="textarea md-textarea form-control" type="text" name="task" placeholder="Free Time!" required></input></td>
               <td class="text-center"><button class="btn" id="save-1" type="submit"><i class="far fa-save fa-2x"></i></button></td>
+              <td class="text-center"><button class="btn delete" id="delete-1" type="submit" onclick="deleteTask()"><i class="far fa-trash-alt fa-2x"></i></button></td>
             </tr>
             <tr>
               <td class="hour text-center" data-time="10" id="dos">10:00</td>
