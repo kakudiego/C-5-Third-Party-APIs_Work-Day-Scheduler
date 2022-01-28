@@ -180,11 +180,11 @@ console.log(currentHour);
 let changeInputColor1 = function () {
   let parseHour1 = parseInt(hourId1.dataset.time);
   if (currentHour === parseHour1) {
-    document.querySelector("#user-input1").className += " future";
+    document.querySelector("#user-input1").className += " present";
   } else if (currentHour > parseHour1) {
     document.querySelector("#user-input1").className += " past";
   } else {
-    document.querySelector("#user-input1").className += " present";
+    document.querySelector("#user-input1").className += " future";
   }
   console.log(parseHour1);
 };
@@ -192,11 +192,11 @@ let changeInputColor1 = function () {
 let changeInputColor2 = function () {
   let parseHour2 = parseInt(hourId2.dataset.time);
   if (currentHour === parseHour2) {
-    document.querySelector("#user-input2").className += " future";
+    document.querySelector("#user-input2").className += " present";
   } else if (currentHour > parseHour2) {
     document.querySelector("#user-input2").className += " past";
   } else {
-    document.querySelector("#user-input2").className += " present";
+    document.querySelector("#user-input2").className += " future";
   }
   console.log(parseHour2);
 };
@@ -204,11 +204,11 @@ let changeInputColor2 = function () {
 let changeInputColor3 = function () {
   let parseHour3 = parseInt(hourId3.dataset.time);
   if (currentHour === parseHour3) {
-    document.querySelector("#user-input3").className += " future";
+    document.querySelector("#user-input3").className += " present";
   } else if (currentHour > parseHour3) {
     document.querySelector("#user-input3").className += " past";
   } else {
-    document.querySelector("#user-input3").className += " present";
+    document.querySelector("#user-input3").className += " future";
   }
   console.log(parseHour3);
 };
@@ -216,11 +216,11 @@ let changeInputColor3 = function () {
 let changeInputColor4 = function () {
   let parseHour4 = parseInt(hourId4.dataset.time);
   if (currentHour === parseHour4) {
-    document.querySelector("#user-input4").className += " future";
+    document.querySelector("#user-input4").className += " present";
   } else if (currentHour > parseHour4) {
     document.querySelector("#user-input4").className += " past";
   } else {
-    document.querySelector("#user-input4").className += " present";
+    document.querySelector("#user-input4").className += " future";
   }
   console.log(parseHour4);
 };
@@ -228,11 +228,11 @@ let changeInputColor4 = function () {
 let changeInputColor5 = function () {
   let parseHour5 = parseInt(hourId5.dataset.time);
   if (currentHour === parseHour5) {
-    document.querySelector("#user-input5").className += " future";
+    document.querySelector("#user-input5").className += " present";
   } else if (currentHour > parseHour5) {
     document.querySelector("#user-input5").className += " past";
   } else {
-    document.querySelector("#user-input5").className += " present";
+    document.querySelector("#user-input5").className += " future";
   }
   console.log(parseHour5);
 };
@@ -240,11 +240,11 @@ let changeInputColor5 = function () {
 let changeInputColor6 = function () {
   let parseHour6 = parseInt(hourId6.dataset.time);
   if (currentHour === parseHour6) {
-    document.querySelector("#user-input6").className += " future";
+    document.querySelector("#user-input6").className += " present";
   } else if (currentHour > parseHour6) {
     document.querySelector("#user-input6").className += " past";
   } else {
-    document.querySelector("#user-input6").className += " present";
+    document.querySelector("#user-input6").className += " future";
   }
   console.log(parseHour6);
 };
@@ -252,11 +252,11 @@ let changeInputColor6 = function () {
 let changeInputColor7 = function () {
   let parseHour7 = parseInt(hourId7.dataset.time);
   if (currentHour === parseHour7) {
-    document.querySelector("#user-input7").className += " future";
+    document.querySelector("#user-input7").className += " present";
   } else if (currentHour > parseHour7) {
     document.querySelector("#user-input7").className += " past";
   } else {
-    document.querySelector("#user-input7").className += " present";
+    document.querySelector("#user-input7").className += " future";
   }
   console.log(parseHour7);
 };
@@ -264,11 +264,11 @@ let changeInputColor7 = function () {
 let changeInputColor8 = function () {
   let parseHour8 = parseInt(hourId8.dataset.time);
   if (currentHour === parseHour8) {
-    document.querySelector("#user-input8").className += " future";
+    document.querySelector("#user-input8").className += " present";
   } else if (currentHour > parseHour8) {
     document.querySelector("#user-input8").className += " past";
   } else {
-    document.querySelector("#user-input8").className += " present";
+    document.querySelector("#user-input8").className += " future";
   }
   console.log(parseHour8);
 };
@@ -276,11 +276,11 @@ let changeInputColor8 = function () {
 let changeInputColor9 = function () {
   let parseHour9 = parseInt(hourId9.dataset.time);
   if (currentHour === parseHour9) {
-    document.querySelector("#user-input9").className += " future";
+    document.querySelector("#user-input9").className += " present";
   } else if (currentHour > parseHour9) {
     document.querySelector("#user-input9").className += " past";
   } else {
-    document.querySelector("#user-input9").className += " present";
+    document.querySelector("#user-input9").className += " future";
   }
   console.log(parseHour9);
 };
