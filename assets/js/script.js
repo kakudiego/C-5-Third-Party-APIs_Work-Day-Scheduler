@@ -8,7 +8,15 @@ let update = function () {
 
 $(document).ready(function () {
   update();
-  changeInputColor();
+  changeInputColor1();
+  changeInputColor2();
+  changeInputColor3();
+  changeInputColor4();
+  changeInputColor5();
+  changeInputColor6();
+  changeInputColor7();
+  changeInputColor8();
+  changeInputColor9();
 });
 
 // select each save button
@@ -52,6 +60,7 @@ userInput9.value = JSON.parse(localStorage.getItem("17"));
 // };
 
 // event listener for button and save localStorage
+// had to use event listener for each button, because only the first button was working
 save1.addEventListener("click", function (event) {
   event.preventDefault();
   localStorage.setItem("09", JSON.stringify(userInput1.value));
@@ -109,6 +118,7 @@ save9.addEventListener("click", function (event) {
 console.log(localStorage);
 
 // delete task button
+// input empty
 function deleteTask1() {
   localStorage.removeItem("09");
   userInput1.value = "";
@@ -146,62 +156,131 @@ function deleteTask9() {
   userInput9.value = "";
 }
 
-// load tasks
-// let dayTask = JSON.parse(localStorage.getItem("save4") || "{}");
-// console.log(dayTask["save1"]);
+// select hour row
+let hourId1 = document.querySelector(".uno");
+let hourId2 = document.querySelector(".dos");
+let hourId3 = document.querySelector(".tres");
+let hourId4 = document.querySelector(".cuatro");
+let hourId5 = document.querySelector(".cinco");
+let hourId6 = document.querySelector(".seis");
+let hourId7 = document.querySelector(".siete");
+let hourId8 = document.querySelector(".ocho");
+let hourId9 = document.querySelector(".nueve");
 
-// var loadTasks = function () {
-//   // if there are no tasks, set tasks to an empty array and return out of the function
-//   var savedTasks = JSON.parse(localStorage.getItem("save1") || "{}");
-//   console.log("This is the save1 value:", savedTasks);
-
-//   // savedTasks = JSON.parse(savedTasks);
-// };
-// loadTasks();
-
-// // possible change color
-// let changeColor = function(){
-//   let currentHour = "";
-//   if (hour === parseInt()) {}
-//   if (hour === parseInt()) {}
-//   else {}
-// }
-
-// select each hour
-let rows = document.querySelector(".hour");
-// pere hour to a single number
+// parse hour to a single number
 let currentHour = parseInt(moment().format("H"));
 console.log(currentHour);
 
-let inputColor = document.querySelector(".textarea");
+// let parse = parseInt(hourId1.dataset.time);
 
-// // makes a row id to compare
-// Array.from(rows).forEach((hour) => {
-//   let rowIdString = hour.id,
-//     rowHour;
-//   if (rowIdString) {
-//     rowHour = parseInt(rowIdString);
-//   }
-//   if (rowHour) {
-//     // Compares hour id to current hour and sets color accordingly
-//     if (currentHour === rowHour) {
-//       setColor(hour, "lightgrey");
-//     } else if (currentHour < rowHour) {
-//       setColor(hour, "green");
-//     } else {
-//       setColor(hour, "red");
-//     }
-//   }
-// });
-
-// makes a row id to compare
-let changeInputColor = function () {
-  let hourId = document.querySelector(".hour");
-  if (currentHour === hourId) {
-    document.querySelector(".textarea").className += " present";
-  } else if (currentHour < hourId) {
-    document.querySelector(".textarea").className += " past";
+// change color section
+// function to change each row based on time
+// compare parsed hour to parsed data-time of each row
+// extra console.log just to be sure
+let changeInputColor1 = function () {
+  let parseHour1 = parseInt(hourId1.dataset.time);
+  if (currentHour === parseHour1) {
+    document.querySelector("#user-input1").className += " future";
+  } else if (currentHour > parseHour1) {
+    document.querySelector("#user-input1").className += " past";
   } else {
-    document.querySelector(".textarea").className += " future";
+    document.querySelector("#user-input1").className += " present";
   }
+  console.log(parseHour1);
+};
+
+let changeInputColor2 = function () {
+  let parseHour2 = parseInt(hourId2.dataset.time);
+  if (currentHour === parseHour2) {
+    document.querySelector("#user-input2").className += " future";
+  } else if (currentHour > parseHour2) {
+    document.querySelector("#user-input2").className += " past";
+  } else {
+    document.querySelector("#user-input2").className += " present";
+  }
+  console.log(parseHour2);
+};
+
+let changeInputColor3 = function () {
+  let parseHour3 = parseInt(hourId3.dataset.time);
+  if (currentHour === parseHour3) {
+    document.querySelector("#user-input3").className += " future";
+  } else if (currentHour > parseHour3) {
+    document.querySelector("#user-input3").className += " past";
+  } else {
+    document.querySelector("#user-input3").className += " present";
+  }
+  console.log(parseHour3);
+};
+
+let changeInputColor4 = function () {
+  let parseHour4 = parseInt(hourId4.dataset.time);
+  if (currentHour === parseHour4) {
+    document.querySelector("#user-input4").className += " future";
+  } else if (currentHour > parseHour4) {
+    document.querySelector("#user-input4").className += " past";
+  } else {
+    document.querySelector("#user-input4").className += " present";
+  }
+  console.log(parseHour4);
+};
+
+let changeInputColor5 = function () {
+  let parseHour5 = parseInt(hourId5.dataset.time);
+  if (currentHour === parseHour5) {
+    document.querySelector("#user-input5").className += " future";
+  } else if (currentHour > parseHour5) {
+    document.querySelector("#user-input5").className += " past";
+  } else {
+    document.querySelector("#user-input5").className += " present";
+  }
+  console.log(parseHour5);
+};
+
+let changeInputColor6 = function () {
+  let parseHour6 = parseInt(hourId6.dataset.time);
+  if (currentHour === parseHour6) {
+    document.querySelector("#user-input6").className += " future";
+  } else if (currentHour > parseHour6) {
+    document.querySelector("#user-input6").className += " past";
+  } else {
+    document.querySelector("#user-input6").className += " present";
+  }
+  console.log(parseHour6);
+};
+
+let changeInputColor7 = function () {
+  let parseHour7 = parseInt(hourId7.dataset.time);
+  if (currentHour === parseHour7) {
+    document.querySelector("#user-input7").className += " future";
+  } else if (currentHour > parseHour7) {
+    document.querySelector("#user-input7").className += " past";
+  } else {
+    document.querySelector("#user-input7").className += " present";
+  }
+  console.log(parseHour7);
+};
+
+let changeInputColor8 = function () {
+  let parseHour8 = parseInt(hourId8.dataset.time);
+  if (currentHour === parseHour8) {
+    document.querySelector("#user-input8").className += " future";
+  } else if (currentHour > parseHour8) {
+    document.querySelector("#user-input8").className += " past";
+  } else {
+    document.querySelector("#user-input8").className += " present";
+  }
+  console.log(parseHour8);
+};
+
+let changeInputColor9 = function () {
+  let parseHour9 = parseInt(hourId9.dataset.time);
+  if (currentHour === parseHour9) {
+    document.querySelector("#user-input9").className += " future";
+  } else if (currentHour > parseHour9) {
+    document.querySelector("#user-input9").className += " past";
+  } else {
+    document.querySelector("#user-input9").className += " present";
+  }
+  console.log(parseHour9);
 };
