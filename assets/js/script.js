@@ -3,7 +3,7 @@ let update = function () {
   let currentTime = moment().format("dddd, MMMM Do YYYY, HH:mm:ss");
   $("#currentDay").text("Today is: " + currentTime);
   // auto refresh time
-  // setInterval(update, 1000);
+  setInterval(update, 1000);
 };
 
 $(document).ready(function () {
