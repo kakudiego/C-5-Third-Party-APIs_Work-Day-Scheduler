@@ -53,11 +53,12 @@ userInput8.value = JSON.parse(localStorage.getItem("16"));
 userInput9.value = JSON.parse(localStorage.getItem("17"));
 
 // // hit enter to save input
-// enterSave = function (event) {
-//   if (event.charCode === 13) {
-//     localStorage.setItem("09:00", JSON.stringify(userInput1.value));
-//   }
-// };
+// userInput1.addEventListener("keypress", function (event) {
+//   event.charCode === "Enter";
+//   localStorage.setItem("09", JSON.stringify(userInput1.value));
+
+//   console.log("keypress");
+// });
 
 // event listener for button and save localStorage
 // had to use event listener for each button, because only the first button was working
@@ -115,7 +116,6 @@ save9.addEventListener("click", function (event) {
 
   console.log("17", userInput9.value);
 });
-console.log(localStorage);
 
 // delete task button
 // input empty
@@ -169,12 +169,9 @@ let hourId9 = document.querySelector(".nueve");
 
 // parse hour to a single number
 let currentHour = parseInt(moment().format("H"));
-console.log(currentHour);
+// console.log("parseInt hour = " + currentHour);
 
-// let parse = parseInt(hourId1.dataset.time);
-
-// change color section
-// function to change each row based on time
+// function to add new class to each row based on time
 // compare parsed hour to parsed data-time of each row
 // extra console.log just to be sure
 let changeInputColor1 = function () {
@@ -186,7 +183,6 @@ let changeInputColor1 = function () {
   } else {
     document.querySelector("#user-input1").className += " future";
   }
-  console.log(parseHour1);
 };
 
 let changeInputColor2 = function () {
@@ -198,7 +194,6 @@ let changeInputColor2 = function () {
   } else {
     document.querySelector("#user-input2").className += " future";
   }
-  console.log(parseHour2);
 };
 
 let changeInputColor3 = function () {
@@ -210,7 +205,6 @@ let changeInputColor3 = function () {
   } else {
     document.querySelector("#user-input3").className += " future";
   }
-  console.log(parseHour3);
 };
 
 let changeInputColor4 = function () {
@@ -222,7 +216,6 @@ let changeInputColor4 = function () {
   } else {
     document.querySelector("#user-input4").className += " future";
   }
-  console.log(parseHour4);
 };
 
 let changeInputColor5 = function () {
@@ -234,7 +227,6 @@ let changeInputColor5 = function () {
   } else {
     document.querySelector("#user-input5").className += " future";
   }
-  console.log(parseHour5);
 };
 
 let changeInputColor6 = function () {
@@ -246,7 +238,6 @@ let changeInputColor6 = function () {
   } else {
     document.querySelector("#user-input6").className += " future";
   }
-  console.log(parseHour6);
 };
 
 let changeInputColor7 = function () {
@@ -258,7 +249,6 @@ let changeInputColor7 = function () {
   } else {
     document.querySelector("#user-input7").className += " future";
   }
-  console.log(parseHour7);
 };
 
 let changeInputColor8 = function () {
@@ -270,7 +260,6 @@ let changeInputColor8 = function () {
   } else {
     document.querySelector("#user-input8").className += " future";
   }
-  console.log(parseHour8);
 };
 
 let changeInputColor9 = function () {
@@ -282,5 +271,4 @@ let changeInputColor9 = function () {
   } else {
     document.querySelector("#user-input9").className += " future";
   }
-  console.log(parseHour9);
 };
