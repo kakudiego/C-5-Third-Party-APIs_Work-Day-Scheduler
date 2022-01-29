@@ -1,19 +1,27 @@
 # C-5-Third-Party-APIs_Work-Day-Scheduler
 
-- GIVEN I am using a daily planner to create a schedule
-- WHEN I open the planner
-- THEN the current day is displayed at the top of the calendar
-- WHEN I scroll down
-- THEN I am presented with time blocks for standard business hours
-- WHEN I view the time blocks for that day
-- THEN each time block is color-coded to indicate whether it is in the past, present, or future
-- WHEN I click into a time block
-- THEN I can enter an event
-- WHEN I click the save button for that time block
-- THEN the text for that event is saved in local storage
-- WHEN I refresh the page
-- THEN the saved events persist
+Target goals:
 
-## third-party-apis-homework-demo.gif
+- Create a basic work hours schedule
+- Show day and time at the top of the page
+- Time blocks with standard business hours
+- Color of each row based on time of the day, past=red, present=grey, future=green
+- Input for task/event
+- add Save button
+- add Delete button (bonus)
+- Use Local Storage to save the task/event
+- Task/events persist after refresh the page
 
-<img src="./assets/images/05-third-party-apis-homework-demo.gif">
+## Application deployed at URL:
+
+https://kakudiego.github.io/C-5-Third-Party-APIs_Work-Day-Scheduler/
+
+## GitHub repository:
+
+https://github.com/kakudiego/C-5-Third-Party-APIs_Work-Day-Scheduler
+
+## ScreenShots:
+
+<img src="./assets/images/workday1.png">
+
+<img src="./assets/images/workday2.png">
